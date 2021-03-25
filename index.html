@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>1959014-Final Project</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- This is the CS201 Web Dev 1 final. Your task is to make a responsive e-commerce site using
+  BS4 as your CSS front end framework and load products from the FakeStore API (linked below) -->
+  <!-- FakeStoreAPI end point: https://fakestoreapi.com/products -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="staticcatalog.js" charset="utf-8"></script>
+
+  <section id="header-section" class="my-5">
+    <div class="cover">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center">
+                    <p class="mb-0 phone pl-md-2">
+                        <a href="#"class="mr-2">
+                            
+                            Current USD
+                        </a>
+                    <a href="#">
+                    English
+                    </a>
+                    </p>
+                </div>
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </div>
+
+        </div>
+    </div>
+    <!--Nav-->
+    <nav class="navbar navbar-expand-lg main-navbar bg-color main-navbar-color"
+ id="main-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="#">Watches</a>
+        <div class="order-lg-last btn-group">
+            <i class="fas fa-shopping-bag fa-2x"></i>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#myNav" aria-controls="nav" aria-expanded="false"
+        aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i></button>
+    <div class="collapse navbar-collapse"id="myNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="#"class="nav-link">Womens's</a>
+            </li>
+            <li class="nav-item">
+                <a href="#"class="nav-link">Men's</a>
+            </li>
+            <li class="nav-item">
+                <a href="#"class="nav-link">Unisex</a>
+            </li>
+            <li class="nav-item">
+                <a href="#"class="nav-link">Collection</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+    </nav>
+    <!--End of Nav-->
+</section>
+<style>
+    #header-section .i{
+    border-radius: 80px;
+    padding: 15px 50px;
+    font-family: var(--font-poppin);}
+</style>
+
+<section id="about-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc2EmDmSf_FTs9U_eDD310K0MSVpbV7iaCmJStXe2TgRgmgD5EMTk0q8KXFzfqfS4fZwiYGa8E&usqp=CAc" width="500px" height="300px">
+          </div>
+        </div>
+        <div class="col-md-5">
+        <h1 class="h1 h1-responsive mb-4">NEWS<br>ARRIVAL</h1>
+          <button class="btn btn-theme-2">Shop now</button>
+          <button class="btn btn-play ml-3"><i class="fas fa-play"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    #about-section{
+    width:100%;
+    padding: 150px 0;
+    background-color: #99CCFF;
+    font-family: var(--font-poppin);
+}
+#about-section h1{
+    color: #FFFFFF;
+    font-size: 80px;
+    margin: auto;
+}
+#about-section.image{
+    border-radius: 80px 80px 0 80px;
+    overflow: hidden;
+}
+#about-section.image img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+#about-section button{
+    color:#FFFFFF;
+
+}
+  </style>
+
+  
+<section id="service-section" class="">
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <div class="shadow service-show">
+            <i class="fa fa-car" aria-hidden="true"></i>
+          <h4 class="h5">Fast and free delivery</h4>
+          <p>We provide you with fast and free delivery regardless of the product size and value. Your order will be delivered by time and for free</p>
+        </div>
+        <div class="shadow service-show">
+            <i class="fas fa-exchange-alt"></i>
+          <h4 class="h5">100% money back guarantee</h4>
+          <p>We offer 100% money-back guarantee within 60 days of payment. If you are not satisfied with the final product, you may return your purchase</p>
+        </div>
+        <div class="shadow service-show">
+            <i class="fa fa-credit-card" aria-hidden="true"></i>
+          <h4 class="h5">Safe and secure payments</h4>
+          <p>We are committed to increase the safety and security of your payments. Helping you shop more safety and take control over your money</p>
+        </div>         
+      </div>
+    </div>
+  </section>
+  <style>
+    #service-section{
+    margin: 100px 0;
+    padding: 100px 0;
+    font-family: var(--font-poppin);
+}
+#service-section i{
+    font-size: 50px;
+}
+#service-section .service-show{
+    padding: 20px 30px;
+    text-align: center;
+    border-radius: 0px 30px 0px 30px;
+    margin: 10px;
+    background-color: #33CCFF;
+}
+#service-section .service-show p{
+    font-size: 13px;
+    font-weight: 400;
+}
+  </style>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Customer Services</a></li>
+                    <li><a href="#">Template Settings</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Site Map</a></li>
+                    <li><a href="#">Search Terms</a></li>
+                    <li><a href="#">Advanced Search</a></li>
+                    <li><a href="#">Order and Returns</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Why buy from us</h4>
+                <ul>
+                    <li><a href="#">shipping & returns</a></li>
+                    <li><a href="#">secure shopping</a></li>
+                    <li><a href="#">international shipping</a></li>
+                    <li><a href="#">affiliates</a></li>
+                    <li><a href="#">group sales</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>my account</h4>
+                <ul>
+                    <li><a href="#">sign in</a></li>
+                    <li><a href="#">view cart</a></li>
+                    <li><a href="#">my wishlist</a></li>
+                    <li><a href="#">track my order</a></li>
+                    <li><a href='#'>help</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>newsletter</h4>
+                <div class="col-md-8 mx-auto form shadow">
+                    <div class="row">
+                      <div class="col-md-9 my-auto">
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="col-md-3 text-right">
+                        <button class="btn btn-theme">Go</button>
+                      </div>
+                    </div>
+                  </div>
+                  <h4>Store Information</h4>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>My company, 4578 marmora road, glassgow D04-B9RG</a></li>
+                    <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>call us now: 0123-456-789</a></li>
+                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>email info@demolink.org</a></li>
+                </ul>
+                <div class="footer-col">
+            </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #000011;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+</style>
+
+<style>
+    h1, h2, h3, nav li {
+  font-family: 'Kiwi Maru', serif;
+
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+.section i{
+    margin-left: auto;
+}
+</style>
